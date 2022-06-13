@@ -1,0 +1,29 @@
+.go{
+    width: 130px;
+}
+
+.ion-card-paises{
+-webkit-box-shadow: 12px 12px 11px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 12px 12px 11px 0px rgba(0,0,0,0.75);
+box-shadow: 12px 12px 11px 0px rgba(0,0,0,0.75);
+margin-right: 30px;
+}
+
+.div-control{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+}
+
+.div-icon{
+    margin-right: 21px;
+}
+
+.text-pais{
+    font-size: 24px;
+}
+
+.text-detail{
+    font-size: 21px;
+}

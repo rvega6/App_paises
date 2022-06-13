@@ -1,0 +1,7 @@
+{
+  "name": "apppaises",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,26 @@
+<ion-content [fullscreen]="true">
+  <ion-searchbar 
+                  placeholders="Buscar"
+                  [(ngModel)]="searchTerm"></ion-searchbar>
+  <ion-card *ngFor="let pais of paises | filter:searchTerm | slice:0:endUsuarios; " class="ion-card-paises">
+    <ion-item class="ion-activated">
+      <div class="div-control">
+          <div class="div-icon">
+            <ion-img src="assets\icon\Go.JPG" class="go" (click)="mapa(pais.mapa)"></ion-img>
+          </div>
+          <div class="div-pais">
+            <label class="text-pais"> <b> {{ pais.nombre }}  </b></label>
+            <p class="text-detail">  {{pais.capital}} </p>
+            <p class="text-detail">  {{ pais.region }} </p>
+          </div>
+      </div> 
+   </ion-item>
+  </ion-card>
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="Procesando"
+      loadingText="Cargando más información...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+  
